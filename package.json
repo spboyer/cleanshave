@@ -21,5 +21,8 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.9.0",
     "typescript": "^1.6.2"
-  }
+   },
+   "scripts": {
+     "postinstall" : "gulp build"
+   }
 }
