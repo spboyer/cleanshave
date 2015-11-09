@@ -15,10 +15,10 @@ using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
-using cleanshave.Models;
-using cleanshave.Services;
+using CleanShave.Models;
+using CleanShave.Services;
 
-namespace cleanshave
+namespace CleanShave
 {
     public class Startup
     {
@@ -39,7 +39,7 @@ namespace cleanshave
             }
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
-            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/cleanshave.db";
+            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/CleanShave.db";
         }
 
         public IConfigurationRoot Configuration { get; set; }
