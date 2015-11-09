@@ -1,11 +1,25 @@
 {
   "name": "cleanshave",
   "version": "0.0.0",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "angular2-universal-patched": "^0.5.4",
+    "bootstrap": "^3.3.5",
+    "es6-module-loader": "^0.15.0",
+    "jquery": "^2.1.4",
+    "less": "^2.5.3",
+    "lodash": "^3.10.1",
+    "reflect-metadata": "^0.1.2",
+    "systemjs": "^0.19.3",
+    "traceur": "0.0.91"
+  },
   "devDependencies": {
-    "gulp": "3.8.11",
-    "gulp-concat": "2.5.2",
-    "gulp-cssmin": "0.1.7",
-    "gulp-uglify": "1.2.0",
-    "rimraf": "2.2.8"
+    "del": "^2.0.2",
+    "event-stream": "^3.3.1",
+    "gulp": "^3.9.0",
+    "gulp-inline-ng2-template": "0.0.7",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.9.0",
+    "typescript": "^1.6.2"
   }
 }
