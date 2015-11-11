@@ -1,4 +1,4 @@
-# CloseShave
+# CleanShave
 An Angular 2 application with ASP.NET 5
 
 ### Getting Started
