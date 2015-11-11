@@ -32,26 +32,11 @@ namespace CleanShave
         {
             services.Configure<SiteSettings>(settings =>
             {
-                settings.DefaultAdminUsername = Configuration["DefaultAdminUsername"];
-                settings.DefaultAdminPassword = Configuration["DefaultAdminPassword"];
+
             });
 
             // Add MVC services to the services container.
             services.AddMvc();
-
-            // Add Entity Framework services to the services container.
-            services.AddEntityFramework()
-                .AddSqlite()
-                .AddDbContext<ApplicationDbContext>(options => {
-                    options.UseSqlite(Configuration["DbConnectionString"]);
-                });
-
-            // Add Identity services to the services container
-            services.AddIdentity<ApplicationUser, IdentityRole>()
-                    .AddEntityFrameworkStores<ApplicationDbContext>()
-                    .AddDefaultTokenProviders();
-
-
 
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.
             // You will also need to add the Microsoft.AspNet.Mvc.WebApiCompatShim package to the 'dependencies' section of project.json.
