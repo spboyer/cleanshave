@@ -4,9 +4,12 @@ An Angular 2 application with ASP.NET 5
 ### Getting Started
 The application is built on beta8 of ASP.NET 5, refer to http://docs.asp.net to install.
 
-```
-git clone https://github.com/spboyer/cleanshave.git
-npm install
-dnx web
-```
-open http://localhost:5000
+1. Fork and clone the site
+
+1. Run `npm install`
+
+1. Open a terminal window and execute `npm run tsc`, this starts the TypeScript compiler
+
+1. Open a second terminal window and execute `npm start`.  This command runs the `gulp build` task, then starts [nodemon](http://nodemon.io) for `dnx web`. The `nodemon` process will watch for any changes to the C# code and/or JavaScript files (transpiled from `tsc`) and restart then **kestrel** server.
+
+1. Open http://localhost:5000

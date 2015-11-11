@@ -22,6 +22,7 @@
     "typescript": "^1.6.2"
    },
    "scripts": {
-     "postinstall" : "gulp build"
+     "tsc" : "tsc -p . -w",
+     "start" : "gulp build && nodemon --ext cs,js --exec \"dnx web\" -V"
    }
 }
