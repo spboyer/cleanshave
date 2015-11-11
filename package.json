@@ -2,7 +2,7 @@
   "name": "CleanShave",
   "version": "0.0.0",
   "dependencies": {
-    "angular2": "2.0.0-alpha.44",
+    "angular2": "^2.0.0-alpha.45",
     "angular2-universal-patched": "^0.5.4",
     "bootstrap": "^3.3.5",
     "es6-module-loader": "^0.15.0",
@@ -10,8 +10,7 @@
     "less": "^2.5.3",
     "lodash": "^3.10.1",
     "reflect-metadata": "^0.1.2",
-    "systemjs": "^0.19.3",
-    "traceur": "0.0.91"
+    "systemjs": "^0.19.3"
   },
   "devDependencies": {
     "del": "^2.0.2",
