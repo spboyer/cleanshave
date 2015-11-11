@@ -5,17 +5,14 @@ import { About } from './about/about';
 
 
 @ng.Component({
-    selector: 'app'
+    selector: 'app',templateUrl: './app/app.html',
+    styleUrls: ['./app/app.css'],
+    directives: [router.ROUTER_DIRECTIVES, ng.NgFor]
 })
 @router.RouteConfig([
     { path: '/', component: Home, as: 'Home' },
     { path: '/About', component: About, as: 'About' },
 ])
-@ng.View({
-    templateUrl: './app/app.html',
-    styleUrls: ['./app/app.css'],
-    directives: [router.ROUTER_DIRECTIVES, ng.NgFor]
-})
 export class App {
 
 }
