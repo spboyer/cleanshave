@@ -1,12 +1,12 @@
 import * as ng from 'angular2/angular2';
 
 @ng.Component({
-	selector: 'home'
+	selector: 'about'
 })
 @ng.View({
-	templateUrl: './ng-app/components/public/home/home.html'
+	templateUrl: './app/about/about.html'
 })
-export class Home{
+export class About{
 
 	constructor() {
 
