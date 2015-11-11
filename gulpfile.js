@@ -18,8 +18,6 @@ var config = {
     lib: [
         require.resolve('bootstrap/dist/css/bootstrap.css'),
         path.dirname(require.resolve('bootstrap/dist/fonts/glyphicons-halflings-regular.woff')) + '/**',
-        require.resolve('es6-module-loader/dist/es6-module-loader-sans-promises.js'),
-        require.resolve('reflect-metadata/Reflect.js'),
         require.resolve('systemjs/dist/system.src.js'),
         require.resolve('angular2/bundles/angular2.dev.js'),
         require.resolve('angular2/bundles/router.dev.js'),
