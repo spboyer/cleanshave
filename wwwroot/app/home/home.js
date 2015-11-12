@@ -16,12 +16,10 @@ var Home = (function () {
     Home = __decorate([
         ng.Component({
             selector: 'home',
-            template: "\n   <div>\n   \t<h1>Home Page</h1>\n   </div>\n\t"
+            templateUrl: './app/home/home.html'
         }), 
         __metadata('design:paramtypes', [])
     ], Home);
     return Home;
 })();
 exports.Home = Home;
-
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9ob21lL2hvbWUudHMiXSwibmFtZXMiOlsiSG9tZSIsIkhvbWUuY29uc3RydWN0b3IiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQUEsSUFBWSxFQUFFLFdBQU0sbUJBQW1CLENBQUMsQ0FBQTtBQUV4QztJQVVDQTtJQUdBQyxDQUFDQTtJQWJGRDtRQUFDQSxFQUFFQSxDQUFDQSxTQUFTQSxDQUFDQTtZQUNiQSxRQUFRQSxFQUFFQSxNQUFNQTtZQUNoQkEsUUFBUUEsRUFBRUEsb0RBSVRBO1NBQ0RBLENBQUNBOzthQU9EQTtJQUFEQSxXQUFDQTtBQUFEQSxDQWRBLEFBY0NBLElBQUE7QUFOWSxZQUFJLE9BTWhCLENBQUEiLCJmaWxlIjoiYXBwL2hvbWUvaG9tZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIG5nIGZyb20gJ2FuZ3VsYXIyL2FuZ3VsYXIyJztcblxuQG5nLkNvbXBvbmVudCh7XG5cdHNlbGVjdG9yOiAnaG9tZScsXG5cdHRlbXBsYXRlOiBgXG4gICA8ZGl2PlxuICAgXHQ8aDE+SG9tZSBQYWdlPC9oMT5cbiAgIDwvZGl2PlxuXHRgXG59KVxuZXhwb3J0IGNsYXNzIEhvbWV7XG5cblx0Y29uc3RydWN0b3IoKSB7XG5cblxuXHR9XG59Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
