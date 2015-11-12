@@ -2,10 +2,9 @@
   "name": "CleanShave",
   "version": "0.0.0",
   "dependencies": {
-    "angular2": "^2.0.0-alpha.45",
-    "angular2-universal-patched": "^0.5.4",
+    "angular2": "2.0.0-alpha.45",
+    "angular2-universal-preview": "^0.6.1",
     "bootstrap": "^3.3.5",
-    "es6-module-loader": "^0.15.0",
     "jquery": "^2.1.4",
     "less": "^2.5.3",
     "lodash": "^3.10.1",
@@ -23,6 +22,6 @@
    },
    "scripts": {
      "tsc" : "tsc -p . -w",
-     "start" : "gulp build && nodemon --ext cs,js --exec \"dnx web\" -V"
+     "start" : "gulp build-dev && nodemon --ext cs,js --exec \"dnx web\" -V"
    }
 }

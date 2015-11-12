@@ -32,7 +32,7 @@ gulp.task('build.lib', function () {
         .pipe(gulp.dest(webroot + 'lib'));
 });
 
-gulp.task('build', ['build.lib'], function () {
+gulp.task('build-prod', ['build.lib'], function () {
     var tsProject = typescript.createProject('./tsconfig.json', { typescript: require('typescript') });
     var tsSrcInlined = gulp.src([webroot + '**/*.ts'], { base: webroot })
         .pipe(inlineNg2Template({ base: webroot }));
@@ -41,6 +41,10 @@ gulp.task('build', ['build.lib'], function () {
         .pipe(typescript(tsProject))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(webroot));
+});
+
+gulp.task('build-dev', ['build.lib'], function () {
+    
 });
 
 gulp.task('clean', function () {
