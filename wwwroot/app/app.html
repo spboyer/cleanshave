@@ -1,9 +1,16 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav"
+            aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" [router-link]="[routes.home.as]">CleanShave</a>
         </div>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="nav">
             <ul class="nav navbar-nav">
                 <li><a [router-link]="[routes.home.as]">Home</a></li>
                 <li><a [router-link]="[routes.about.as]">About</a></li>
@@ -11,6 +18,6 @@
         </div>
     </div>
 </nav>
-<div class="container body-content">
+<div>
     <router-outlet></router-outlet>
 </div>
