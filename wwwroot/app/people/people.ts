@@ -1,23 +1,32 @@
-import {Component, CORE_DIRECTIVES, FORM_BINDINGS, OnInit} from 'angular2/angular2';
-import {PeopleService} from './people';
+import {Component, CORE_DIRECTIVES, OnInit} from 'angular2/angular2';
+import {PeopleService} from './people.service';
 import {Person} from '../core/person';
 
 @Component({
-   selector: 'people',
-   templateUrl: './app/people/people.html',
-   directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
- })
- 
- export class People {
+    selector: 'people',
+    templateUrl: './app/people/people.html',
+    directives: [CORE_DIRECTIVES],
+})
+export class People {
+    public people: Array<Person>;
 
-    public Person[] : people;
+ //  onInit() {
+ //       this.people = this.getPeople();
+ //   }
 
-    constructor(private PeopleService : _peopleService) {}
+    constructor(private _peopleService: PeopleService) {
+        _peopleService.getPeople3()
+            .subscribe(res => this.people = res);
+}
 
-    onInit() { this.people = this.getPeople(); }
+//    getPeople() {
+        // this.people = [];
+        // this._peopleService.getPeople2();
 
-   getPeople() {
-       this._peopleService.getPeople()
-       .then((people: Person[]) => this.people = people);
-   }
- }
+        // return this.people;
+
+
+
+
+//    }
+}

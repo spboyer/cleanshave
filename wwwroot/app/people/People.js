@@ -10,24 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var people_service_1 = require('./people.service');
 var People = (function () {
-    function People(PeopleService) {
-        this.PeopleService = PeopleService;
-        this.Person = [];
-    }
-    People.prototype.onInit = function () { this.people = this.getPeople(); };
-    People.prototype.getPeople = function () {
+    //  onInit() {
+    //       this.people = this.getPeople();
+    //   }
+    function People(_peopleService) {
         var _this = this;
-        this._peopleService.getPeople()
-            .then(function (people) { return _this.people = people; });
-    };
+        this._peopleService = _peopleService;
+        _peopleService.getPeople3()
+            .subscribe(function (res) { return _this.people = res; });
+    }
     People = __decorate([
         angular2_1.Component({
             selector: 'people',
             templateUrl: './app/people/people.html',
-            directives: [angular2_1.CORE_DIRECTIVES, FORM_DIRECTIVES]
+            directives: [angular2_1.CORE_DIRECTIVES],
         }), 
-        __metadata('design:paramtypes', [Object])
+        __metadata('design:paramtypes', [people_service_1.PeopleService])
     ], People);
     return People;
 })();
