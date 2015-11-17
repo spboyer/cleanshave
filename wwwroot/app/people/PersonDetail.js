@@ -10,22 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var router_1 = require('angular2/router');
 var people_service_1 = require('./people.service');
-var People = (function () {
-    function People(_peopleService) {
+var PersonDetail = (function () {
+    function PersonDetail(_peopleService, _routeParams, _router) {
         var _this = this;
         this._peopleService = _peopleService;
-        _peopleService.getPeople()
-            .subscribe(function (res) { return _this.people = res; });
+        this._routeParams = _routeParams;
+        this._router = _router;
+        var id = +this._routeParams.get('id');
+        _peopleService.getPerson(id)
+            .subscribe(function (res) { return _this.person = res; });
     }
-    People = __decorate([
+    PersonDetail = __decorate([
         angular2_1.Component({
-            selector: 'people',
-            templateUrl: './app/people/people.html',
-            directives: [angular2_1.CORE_DIRECTIVES],
+            selector: 'person-detail',
+            templateUrl: './app/people/person.html',
+            directives: [angular2_1.CORE_DIRECTIVES, angular2_1.FORM_DIRECTIVES],
+            inputs: ['person']
         }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService])
-    ], People);
-    return People;
+        __metadata('design:paramtypes', [people_service_1.PeopleService, router_1.RouteParams, router_1.Router])
+    ], PersonDetail);
+    return PersonDetail;
 })();
-exports.People = People;
+exports.PersonDetail = PersonDetail;

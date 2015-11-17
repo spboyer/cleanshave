@@ -40,14 +40,20 @@ var PeopleService = (function () {
             return result;
         });
     };
-    // getPerson(id: number) {
-    //    let promise = this._http.get('/api/people/' + id.toString)
-    //         .map((response: any) => response.json()).toPromise()
-    //         .then((person: Person) => {
-    //             this.person = person;
-    //         }).then((_: any) => _, (e: any) => this._fetchFailed(e));
-    // 		return promise;
-    // }
+    PeopleService.prototype.getPerson = function (id) {
+        return this._http.get('/api/people/' + id.toString())
+            .map(function (response) {
+            return response.json();
+        })
+            .map(function (person) {
+            var result = null;
+            if (person) {
+                result = person;
+            }
+            ;
+            return result;
+        });
+    };
     PeopleService.prototype._fetchFailed = function (error) {
         console.error(error);
         return Promise.reject(error);

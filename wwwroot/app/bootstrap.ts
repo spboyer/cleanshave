@@ -5,7 +5,7 @@ import { App } from './app';
 import { PeopleService } from './people/people.service'
 
 ng.bootstrap(App, [
-    router.ROUTER_BINDINGS,
+    router.ROUTER_PROVIDERS,
     HTTP_BINDINGS,
     ng.FormBuilder,
     PeopleService

@@ -34,14 +34,20 @@ export class PeopleService {
             });
     }
 
-    // getPerson(id: number) {
-    //    let promise = this._http.get('/api/people/' + id.toString)
-    //         .map((response: any) => response.json()).toPromise()
-    //         .then((person: Person) => {
-    //             this.person = person;
-    //         }).then((_: any) => _, (e: any) => this._fetchFailed(e));
-    // 		return promise;
-    // }
+    getPerson(id: number) {
+        return this._http.get('/api/people/' + id.toString())
+            .map((response) => {
+                return response.json();
+            })
+            .map((person: Person) => {
+                let result: any = null;
+
+                if (person) {
+                    result = person;
+                };
+                return result;
+            });
+    }
 
     private _fetchFailed(error: any) {
         console.error(error);

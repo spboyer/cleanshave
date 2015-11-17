@@ -10,23 +10,8 @@ import {Person} from '../core/person';
 export class People {
     public people: Array<Person>;
 
- //  onInit() {
- //       this.people = this.getPeople();
- //   }
-
     constructor(private _peopleService: PeopleService) {
         _peopleService.getPeople()
             .subscribe(res => this.people = res);
-}
-
-//    getPeople() {
-        // this.people = [];
-        // this._peopleService.getPeople2();
-
-        // return this.people;
-
-
-
-
-//    }
+    }
 }
