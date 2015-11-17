@@ -15,7 +15,7 @@ export class People {
  //   }
 
     constructor(private _peopleService: PeopleService) {
-        _peopleService.getPeople3()
+        _peopleService.getPeople()
             .subscribe(res => this.people = res);
 }
 

@@ -20,9 +20,13 @@ var PeopleService = (function () {
         this._http = _http;
         this.people = [];
     }
-    PeopleService.prototype.getPeople3 = function () {
+    PeopleService.prototype.getPeople = function () {
         //return an observable
         return this._http.get('/api/people')
+            .catch(function (err) {
+            console.log(err);
+            return [];
+        })
             .map(function (response) {
             return response.json();
         })
@@ -30,29 +34,11 @@ var PeopleService = (function () {
             var result = [];
             if (people) {
                 people.forEach(function (p) {
-                    console.log(JSON.stringify(p));
                     result.push(p);
                 });
             }
             return result;
         });
-    };
-    PeopleService.prototype.getPeople2 = function () {
-        var _this = this;
-        this._http.get('/api/people')
-            .map(function (res) { return res.json(); })
-            .subscribe(function (data) { return _this.people = data; }, function (err) { return console.log(err); }, function () { return console.log('getPeople complete' + _this.people); });
-    };
-    PeopleService.prototype.getPeople = function () {
-        var _this = this;
-        this.people.length = 0;
-        var promise = this._http.get('/api/people')
-            .map(function (response) { return response.json(); }).toPromise()
-            .then(function (people) {
-            (_a = _this.people).push.apply(_a, people);
-            var _a;
-        }).then(function (_) { return _; }, function (e) { return _this._fetchFailed(e); });
-        return promise;
     };
     // getPerson(id: number) {
     //    let promise = this._http.get('/api/people/' + id.toString)

@@ -18,7 +18,7 @@ var People = (function () {
     function People(_peopleService) {
         var _this = this;
         this._peopleService = _peopleService;
-        _peopleService.getPeople3()
+        _peopleService.getPeople()
             .subscribe(function (res) { return _this.people = res; });
     }
     People = __decorate([
