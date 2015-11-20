@@ -2,7 +2,7 @@
 An Angular 2 application with ASP.NET 5
 
 ### Getting Started
-The application is built on beta8 of ASP.NET 5, refer to http://docs.asp.net to install.
+The application is built on rc1 of ASP.NET 5, refer to http://docs.asp.net to install.
 
 1. Fork and clone the site
 
