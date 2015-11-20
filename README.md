@@ -1,6 +1,8 @@
 # CleanShave
 An Angular 2 application with ASP.NET 5
 
+![ss](readme-ss.png)
+
 ### Getting Started
 The application is built on rc1 of ASP.NET 5, refer to http://docs.asp.net to install.
 

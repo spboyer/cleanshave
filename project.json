@@ -20,7 +20,8 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "EntityFramework.Sqlite": "7.0.0-rc1-final",
-    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final"
+    "Microsoft.AspNet.Identity.EntityFramework": "3.0.0-rc1-final",
+    "Glimpse": "2.0.0-beta1"
   },
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel"
