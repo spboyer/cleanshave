@@ -9,24 +9,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var ng = require('angular2/angular2');
-var router_1 = require('angular2/router');
-var routes_config_1 = require('../routes.config');
-var Home = (function () {
-    function Home(_router) {
-        this._router = _router;
+var angular2_1 = require('angular2/angular2');
+var people_service_1 = require('./people.service');
+var People = (function () {
+    function People(_peopleService) {
+        var _this = this;
+        this._peopleService = _peopleService;
+        _peopleService.getPeople()
+            .subscribe(function (res) { return _this.people = res; });
     }
-    Home.prototype.goToPeople = function () {
-        this._router.navigate([("/" + routes_config_1.Routes.people.as), {}]);
-    };
-    Home = __decorate([
-        ng.Component({
-            selector: 'home',
-            templateUrl: './app/home/home.html',
-            directives: [ng.CORE_DIRECTIVES, ng.FORM_DIRECTIVES]
+    People = __decorate([
+        angular2_1.Component({
+            selector: 'people',
+            templateUrl: './app/people/people.html',
+            directives: [angular2_1.CORE_DIRECTIVES],
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], Home);
-    return Home;
+        __metadata('design:paramtypes', [people_service_1.PeopleService])
+    ], People);
+    return People;
 })();
-exports.Home = Home;
+exports.People = People;

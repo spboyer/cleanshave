@@ -11,7 +11,7 @@ var inlineNg2Template = require('gulp-inline-ng2-template');
 var sourcemaps = require('gulp-sourcemaps');
 
 var project = require("./project.json");
-var webroot = "./" + project.webroot + "/";
+var webroot = "./wwwroot/";
 
 var config = {
     libBase: 'node_modules',
@@ -44,11 +44,11 @@ gulp.task('build-prod', ['build.lib'], function () {
 });
 
 gulp.task('build-dev', ['build.lib'], function () {
-    
+
 });
 
 gulp.task('clean', function () {
     return del([webroot + 'lib']);
 });
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build-dev']);
