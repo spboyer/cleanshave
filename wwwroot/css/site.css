@@ -22,3 +22,7 @@ background-image: url("../img/jumbotron_bg.jpg");
 background-size: cover;
 color: #fff;
 }
+
+.container {
+    padding-top: 5px;
+}
