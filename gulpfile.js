@@ -1,5 +1,4 @@
-/// <binding AfterBuild='build' Clean='clean' />
-
+/// <binding BeforeBuild='default' Clean='clean' />
 "use strict";
 
 var path = require('path');
