@@ -13,7 +13,7 @@ export class Home{
 	}
 
     goToPeople(){
-        this._router.navigate([`/${Routes.people.as}`, {}]);
+        this._router.navigate(['People', {}]);
     }
 
 }
