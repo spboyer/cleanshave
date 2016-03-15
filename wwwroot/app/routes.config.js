@@ -1,4 +1,6 @@
-System.register(['./home/Home', './about/About', './people/People', './people/PersonDetail', 'angular2/router'], function(exports_1) {
+System.register(['./home/Home', './about/About', './people/People', './people/PersonDetail', 'angular2/router'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var Home_1, About_1, People_1, PersonDetail_1, router_1;
     var Routes, APP_ROUTES;
     return {
@@ -20,10 +22,10 @@ System.register(['./home/Home', './about/About', './people/People', './people/Pe
             }],
         execute: function() {
             exports_1("Routes", Routes = {
-                home: new router_1.Route({ path: '/', as: 'Home', component: Home_1.Home }),
-                about: new router_1.Route({ path: '/about', as: 'About', component: About_1.About }),
-                people: new router_1.Route({ path: '/people', as: 'People', component: People_1.People }),
-                detail: new router_1.Route({ path: '/people/:id', as: 'Detail', component: PersonDetail_1.PersonDetail })
+                home: new router_1.Route({ path: '/', name: 'Home', component: Home_1.Home }),
+                about: new router_1.Route({ path: '/about', name: 'About', component: About_1.About }),
+                people: new router_1.Route({ path: '/people', name: 'People', component: People_1.People }),
+                detail: new router_1.Route({ path: '/people/:id', name: 'Detail', component: PersonDetail_1.PersonDetail })
             });
             exports_1("APP_ROUTES", APP_ROUTES = Object.keys(Routes).map(function (r) { return Routes[r]; }));
         }
