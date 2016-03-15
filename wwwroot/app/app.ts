@@ -16,11 +16,10 @@ import { PersonDetail } from './people/PersonDetail';
     providers: [PeopleService, ROUTER_PROVIDERS, HTTP_PROVIDERS]
 })
 @RouteConfig([
-    { path: '/', name: 'Home', component: Home },
+    { path: '/', name: 'Home', component: Home, useAsDefault: true },
     { path: '/about', name: 'About', component: About },
     { path: '/people', name: 'People', component: People },
     { path: '/people/:id', name: 'Detail', component: PersonDetail }
-
 ])
 export class App {
 

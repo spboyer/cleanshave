@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {Routes} from '../routes.config';
+//import {Routes} from '../routes.config';
 
 @Component({
 	selector: 'home',
