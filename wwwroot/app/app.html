@@ -8,12 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" [router-link]="[routes.home.as]">Trail Running Life</a>
+            <a class="navbar-brand" [routerLink]="['Home']">Trail Running Life</a>
         </div>
         <div class="collapse navbar-collapse" id="nav">
             <ul class="nav navbar-nav">
-                <li><a [router-link]="[routes.home.as]">Home</a></li>
-                <li><a [router-link]="[routes.about.as]">About</a></li>
+                <li><a [routerLink]="['Home']" href="">Home</a></li>
+                <li><a [routerLink]="['People']" href="">People</a></li>
+                <li><a [routerLink]="['About']" href="">About</a></li>
             </ul>
         </div>
     </div>

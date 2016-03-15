@@ -1,4 +1,4 @@
-import * as ng from 'angular2/angular2';
+import * as ng from 'angular2/core';
 
 @ng.Component({
 	selector: 'about',

@@ -1,11 +1,11 @@
-import {Component, CORE_DIRECTIVES, OnInit} from 'angular2/angular2';
+import {Component, OnInit} from 'angular2/core';
 import {PeopleService} from './people.service';
 import {Person} from '../core/person';
 
 @Component({
     selector: 'people',
     templateUrl: './app/people/people.html',
-    directives: [CORE_DIRECTIVES],
+    directives: [],
 })
 export class People {
     public people: Array<Person>;

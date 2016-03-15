@@ -1,11 +1,11 @@
-import * as ng from 'angular2/angular2';
+import {Component} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {Routes} from '../routes.config';
+//import {Routes} from '../routes.config';
 
-@ng.Component({
+@Component({
 	selector: 'home',
 	templateUrl: './app/home/home.html',
-    directives: [ng.CORE_DIRECTIVES, ng.FORM_DIRECTIVES]
+    directives: []
 })
 export class Home{
 
@@ -13,7 +13,7 @@ export class Home{
 	}
 
     goToPeople(){
-        this._router.navigate([`/${Routes.people.as}`, {}]);
+        this._router.navigate(['People', {}]);
     }
 
 }

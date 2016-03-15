@@ -1,31 +1,45 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") return Reflect.decorate(decorators, target, key, desc);
-    switch (arguments.length) {
-        case 2: return decorators.reduceRight(function(o, d) { return (d && d(o)) || o; }, target);
-        case 3: return decorators.reduceRight(function(o, d) { return (d && d(target, key)), void 0; }, void 0);
-        case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
+System.register(['angular2/core', './people.service'], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    var __metadata = (this && this.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
+    var core_1, people_service_1;
+    var People;
+    return {
+        setters:[
+            function (core_1_1) {
+                core_1 = core_1_1;
+            },
+            function (people_service_1_1) {
+                people_service_1 = people_service_1_1;
+            }],
+        execute: function() {
+            People = (function () {
+                function People(_peopleService) {
+                    var _this = this;
+                    this._peopleService = _peopleService;
+                    _peopleService.getPeople()
+                        .subscribe(function (res) { return _this.people = res; });
+                }
+                People = __decorate([
+                    core_1.Component({
+                        selector: 'people',
+                        templateUrl: './app/people/people.html',
+                        directives: [],
+                    }), 
+                    __metadata('design:paramtypes', [people_service_1.PeopleService])
+                ], People);
+                return People;
+            }());
+            exports_1("People", People);
+        }
     }
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-var angular2_1 = require('angular2/angular2');
-var people_service_1 = require('./people.service');
-var People = (function () {
-    function People(_peopleService) {
-        var _this = this;
-        this._peopleService = _peopleService;
-        _peopleService.getPeople()
-            .subscribe(function (res) { return _this.people = res; });
-    }
-    People = __decorate([
-        angular2_1.Component({
-            selector: 'people',
-            templateUrl: './app/people/people.html',
-            directives: [angular2_1.CORE_DIRECTIVES],
-        }), 
-        __metadata('design:paramtypes', [people_service_1.PeopleService])
-    ], People);
-    return People;
-})();
-exports.People = People;
+});
+//# sourceMappingURL=People.js.map
