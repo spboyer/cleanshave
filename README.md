@@ -16,7 +16,7 @@ The application is built on rc1 of ASP.NET 5, refer to http://docs.asp.net to in
 
 1. Open http://localhost:5000
 
-### Using Visal Studio 2015
+### Using Visual Studio 2015
 To open in VS you need to open using the git connector.
 
 <img width="392" alt="screen shot 2015-11-21 at 8 46 44 am" src="https://cloud.githubusercontent.com/assets/7681382/11319010/828bae9a-9036-11e5-8e8e-fa09533e5db6.png">
